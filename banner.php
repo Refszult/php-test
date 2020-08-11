@@ -1,9 +1,9 @@
 <?php
 
 require 'VisitService.php';
-require 'Repository.php';
+require 'DBRepository.php';
 
-$visitService = new VisitService(new Repository(parse_ini_file('.env', false, INI_SCANNER_RAW)));
+$visitService = new VisitService(new DBRepository(parse_ini_file('.env', false, INI_SCANNER_RAW)));
 $visitService->savingVisit([
     'ip' => $_SERVER['REMOTE_ADDR'],
     'user_agent' => $_SERVER['HTTP_USER_AGENT'],

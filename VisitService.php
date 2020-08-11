@@ -1,11 +1,13 @@
 <?php
 
+require 'RepositoryInterface.php';
+
 
 class VisitService
 {
-    private Repository $repository;
+    private RepositoryInterface $repository;
 
-    public function __construct(Repository $repository)
+    public function __construct(RepositoryInterface $repository)
     {
         $this->repository = $repository;
     }

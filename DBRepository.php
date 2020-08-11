@@ -1,7 +1,7 @@
 <?php
 
 
-class Repository
+class DBRepository implements RepositoryInterface
 {
     private PDO $pdo;
 
